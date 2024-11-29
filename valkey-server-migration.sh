@@ -1,8 +1,14 @@
 #!/bin/bash
 
 yum -y install valkey valkey-compat-redis --allowerasing
+
 mkdir -p /etc/systemd/system/valkey.service.d
 \cp -af /etc/systemd/system/redis.service.d/limit.conf.rpmsave /etc/systemd/system/valkey.service.d/limit.conf
+
+if [ ! -f /etc/valkey/valkey.conf.bak ]; then
+  cp -a /etc/valkey/valkey.conf /etc/valkey/valkey.conf.bak
+fi
+
 sed -i 's|\/var\/log\/redis\/redis.log|\/var\/log\/valkey\/valkey.log|g' /etc/valkey/valkey.conf
 
 cat > "/etc/systemd/system/valkey.service.d/user.conf" <<EOF
