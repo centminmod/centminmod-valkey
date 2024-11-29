@@ -1,6 +1,6 @@
 Centmin Mod installation of Valkey as alternative drop in replacement for Redis server.
 
-Assumption is that Centmin Mod default installed Redis server is in place first.
+Assumption is that Centmin Mod default installed Redis server is in place first and you're using AlmaLinux or Rocky Linux.
 
 ## Check available Valkey YUM packages in EPEL repo
 
