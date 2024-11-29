@@ -201,7 +201,16 @@ diff -u /etc/redis/redis.conf.rpmsave /etc/valkey/valkey.conf
 ```
 ```diff
 --- /etc/redis/redis.conf.rpmsave       2024-11-22 13:32:20.023655176 +0000
-+++ /etc/valkey/valkey.conf     2024-11-29 10:27:49.490220175 +0000
++++ /etc/valkey/valkey.conf     2024-11-29 11:03:06.987026563 +0000
+@@ -352,7 +352,7 @@
+ # Specify the log file name. Also the empty string can be used to force
+ # Redis to log on the standard output. Note that if you use standard
+ # output for logging but daemonize, logs will be sent to /dev/null
+-logfile /var/log/redis/redis.log
++logfile /var/log/valkey/valkey.log
+ 
+ # To enable logging to the system logger, just set 'syslog-enabled' to yes,
+ # and optionally update the other syslog parameters to suit your needs.
 @@ -507,7 +507,7 @@
  # The Append Only File will also be created inside this directory.
  #
