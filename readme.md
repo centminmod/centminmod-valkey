@@ -60,8 +60,23 @@ systemctl status disable-thp --no-pager -l
 systemctl status valkey --no-pager -l
 ```
 
+```bash
+valkey-server -v
+Valkey server v=8.0.1 sha=00000000:0 malloc=jemalloc-5.3.0 bits=64 build=4ed6032a97b67e84
+
+valkey-cli -v
+valkey-cli 8.0.1
+```
+
 ## Verifiy Symlinks For valkey-compat-redis YUM Package
 
+```bash
+redis-server -v
+Valkey server v=8.0.1 sha=00000000:0 malloc=jemalloc-5.3.0 bits=64 build=4ed6032a97b67e84
+
+redis-cli -v
+valkey-cli 8.0.1
+```
 ```bash
 ls -lah $(which redis-cli)
 lrwxrwxrwx 1 root root 10 Nov 13 18:16 /usr/bin/redis-cli -> valkey-cli
